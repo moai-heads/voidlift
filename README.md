@@ -14,9 +14,9 @@ Neutralize all six drones, then reach the gold skiff marker and press **E**. Fue
 
 ## Tiny-by-design
 
-The playable build is one HTML file. It has no libraries, images, fonts, audio files, external requests, asset pipeline, or runtime dependencies. A compact character grid stores the map; the elevation-aware raycaster draws wall faces, panelled floor and exposed wall tops; you can jet onto the 0.72-unit barriers and 2.5-unit bulkheads and land there. The sky, sprites, radar, and weapon are procedural. The raycaster and game logic are plain JavaScript.
+The playable build is one HTML file. It has no libraries, images, fonts, audio files, external requests, asset pipeline, or runtime dependencies. A compact character grid stores the map; one camera-space projection and depth buffer keep wall faces, floor planes, exposed box tops, and sprites in agreement. You can jet onto the 0.72-unit barriers and 2.5-unit bulkheads, then land on their tops. The sky, sprites, radar, and weapon are procedural. The raycaster and game logic are plain JavaScript.
 
-The source is deliberately readable rather than minified. Current playable payload: **28,341 bytes raw / 10,295 bytes gzip-9**. To recheck the footprint:
+The source is deliberately readable rather than minified. Current playable payload: **28,451 bytes raw / 10,351 bytes gzip-9**. To recheck the footprint:
 
 ```sh
 wc -c index.html
